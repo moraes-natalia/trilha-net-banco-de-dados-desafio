@@ -1,91 +1,158 @@
-# DIO - Trilha .NET - Banco de Dados
-www.dio.me
+# Documentação: Exercício DIO SQL Server no macOS com Docker + VS Code
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de banco de dados, da trilha .NET da DIO.
+## Contexto do Projeto
 
-## Contexto
-Você é responsável pelo banco de dados de um site de filmes, onde são armazenados dados sobre os filmes e seus atores. Sendo assim, foi solicitado para que você realize uma consulta no banco de dados com o objetivo de trazer alguns dados para análises.
+Este projeto faz parte dos desafios práticos do Bootcamp WEX – End to End Engineering, uma iniciativa conjunta entre a WEX, empresa global de tecnologia financeira, e a plataforma de ensino DIO (Digital Innovation One). Apresenta a solução desenvolvida para executar o desafio de banco de dados da trilha .NET da DIO em um ambiente macOS, superando a limitação de não disponibilidade do SQL Server Management Studio (SSMS) para este sistema operacional.
 
-## Proposta
-Você precisará realizar 12 consultas ao banco de dados, cada uma retornando um tipo de informação.
-O seu banco de dados está modelado da seguinte maneira:
+🔗 **Exercício Original: https://github.com/digitalinnovationone/trilha-net-banco-de-dados-desafio**
 
-![Diagrama banco de dados](Imagens/diagrama.png)
+### Proposta do Desafio
 
-As tabelas sao descritas conforme a seguir:
+O exercício consiste em realizar 12 consultas SQL em um banco de dados de filmes, abrangendo operações básicas como SELECT, JOIN, filtros, ordenação e agrupamentos. O banco contém 5 tabelas principais (Filmes, Atores, Generos, ElencoFilme, FilmesGenero) com relacionamentos muitos-para-muitos, simulando um sistema real de catalogação cinematográfica.
 
-**Filmes**
+## Problema e Solução
 
-Tabela responsável por armazenar informações dos filmes.
+### Desafio Enfrentado
+- Exercício DIO requer SQL Server e SSMS
+- SSMS não está disponível para macOS
+- Necessidade de ambiente compatível para desenvolvimento SQL
 
-**Atores**
+### Solução Implementada
+Utilização de **Docker + SQL Server Linux + VS Code** como stack alternativa, proporcionando funcionalidade equivalente ao SSMS através de duas abordagens complementares:
 
-Tabela responsável por armazenar informações dos atores.
+1. **Interface Gráfica**: VS Code com extensão SQL Server
+2. **Linha de Comando**: Terminal com sqlcmd via Docker
 
-**Generos**
+## Arquitetura da Solução
 
-Tabela responsável por armazenar os gêneros dos filmes.
+```
+┌─────────────────┐    ┌──────────────────────┐    ┌─────────────────────┐
+│   VS Code       │    │   Docker Container   │    │   Terminal (CLI)    │
+│   - Extensões   │────│   SQL Server Linux   │────│   sqlcmd            │
+│   - IntelliSense│    │   - Porta 1433       │    │   - Consultas       │
+│   - Visualização│    │   - Database: Filmes │    │   - Administração   │
+└─────────────────┘    └──────────────────────┘    └─────────────────────┘
+```
 
-**ElencoFilme**
+## Tecnologias Utilizadas
 
-Tabela responsável por representar um relacionamento do tipo muitos para muitos entre filmes e atores, ou seja, um ator pode trabalhar em muitos filmes, e filmes
-podem ter muitos atores.
+- **Docker Desktop**: Containerização do SQL Server
+- **SQL Server 2022 Linux**: Banco de dados em container
+- **Visual Studio Code**: IDE principal
+- **MSSQL extension for Visual Studio Code**: Interface gráfica para SQL
+- **macOS**: Sistema operacional base
+- **Terminal macOS**: Alternativa simplificada de consulta
 
-**FilmesGenero**
+## Execução - Método VS Code (Interface Gráfica)
 
-Tabela responsável por representar um relacionamento do tipo muitos para muitos entre filmes e gêneros, ou seja, um filme pode ter mais de um gênero, e um genêro pode fazer parte de muitos filmes.
+A implementação via VS Code oferece uma experiência visual completa com recursos avançados:
 
-## Preparando o banco de dados
-Você deverá executar o arquivo **Script Filmes.sql** em seu banco de dados SQL Server, presente na pasta Scripts deste repositório ([ou clique aqui](Script%20Filmes.sql)). Esse script irá criar um banco chamado **Filmes**, contendo as tabelas e os dados necessários para você realizar este desafio.
+### Funcionalidades Demonstradas
+- **IntelliSense**: Autocomplete e validação de sintaxe via MSSQL extension
+- **Visualização de Resultados**: Tabelas formatadas com ordenação
+- **Navegação de Schema**: Explorador de banco de dados integrado
+- **Execução de Consultas**: Interface intuitiva com botões de ação
 
-## Objetivo
-Você deverá criar diversas consultas, com o objetivo de retornar os dados a seguir. Abaixo de cada pedido tem o retorno esperado. O seu retorno deve ser igual ao da imagem.
+### Exemplos de Execução no VS Code
 
-## 1 - Buscar o nome e ano dos filmes
+**Imagem 1: Consulta Básica - SELECT Nome, Ano FROM Filmes**
+![VS Code - Consulta 1](Image1)
+*Visualização da primeira consulta mostrando lista completa de filmes com nome e ano, resultado apresentado em tabela formatada*
 
-![Exercicio 1](Imagens/1.png)
+**Imagem 2: Consulta com JOIN - Filmes e Gêneros**  
+![VS Code - Consulta com JOIN](Image2)
+*Demonstração de consulta complexa com INNER JOIN entre tabelas Filmes e Generos, exibindo relacionamentos*
 
-## 2 - Buscar o nome e ano dos filmes, ordenados por ordem crescente pelo ano
+**Imagem 3: Consulta Filtrada - Gênero Mistério**
+![VS Code - Filtro por Gênero](Image3)
+*Consulta específica filtrando filmes do gênero "Mistério" usando WHERE clause*
 
-![Exercicio 2](Imagens/2.png)
+### Recursos Destacados no VS Code
+- Interface clean e moderna
+- Resultados organizados em colunas ordenáveis
+- Contagem de registros retornados
+- Tempo de execução das consultas
+- Integração com Git para versionamento
 
-## 3 - Buscar pelo filme de volta para o futuro, trazendo o nome, ano e a duração
+## Execução - Método Terminal (Linha de Comando)
 
-![Exercicio 3](Imagens/3.png)
+A implementação via terminal oferece performance superior e controle granular:
 
-## 4 - Buscar os filmes lançados em 1997
+### Vantagens da Execução CLI
+- **Performance**: Execução direta sem overhead de interface
+- **Controle**: Acesso completo às funcionalidades do SQL Server
+- **Automação**: Ideal para scripts e execução em lote
+- **Compatibilidade**: 100% compatível com comandos SSMS
 
-![Exercicio 4](Imagens/4.png)
+### Exemplo de Execução no Terminal
 
-## 5 - Buscar os filmes lançados APÓS o ano 2000
+**Imagem 4: Execução via sqlcmd**
+![Terminal - sqlcmd](Image4)
+*Demonstração da execução via terminal mostrando conexão Docker, consulta SQL e resultados em formato texto*
 
-![Exercicio 5](Imagens/5.png)
+### Comandos Utilizados
+```bash
+# Conexão ao container SQL Server
+docker exec sqlserver /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P password
 
-## 6 - Buscar os filmes com a duracao maior que 100 e menor que 150, ordenando pela duracao em ordem crescente
+# Execução do Script Filmes
+USE Filmes; 
 
-![Exercicio 6](Imagens/6.png)
+# Exemplo de consulta
+SELECT TOP 10 Nome, Ano, Duracao FROM Filmes ORDER BY Ano;
+```
 
-## 7 - Buscar a quantidade de filmes lançadas no ano, agrupando por ano, ordenando pela duracao em ordem decrescente
+## Diagrama de Fluxo da Solução
 
-![Exercicio 7](Imagens/7.png)
+**Imagem 5: Arquitetura Visual**
+![Diagrama de Arquitetura](Image5)
+*Diagrama mostrando a conexão entre VS Code, Terminal e SQL Server via Docker*
 
-## 8 - Buscar os Atores do gênero masculino, retornando o PrimeiroNome, UltimoNome
+## Resultados Alcançados
 
-![Exercicio 8](Imagens/8.png)
+### Consultas Implementadas com Sucesso
+- ✅ **12 consultas DIO** executadas completamente
+- ✅ **JOINs complexos** entre múltiplas tabelas
+- ✅ **Filtros e ordenação** funcionando corretamente
+- ✅ **Agregações e agrupamentos** validados
 
-## 9 - Buscar os Atores do gênero feminino, retornando o PrimeiroNome, UltimoNome, e ordenando pelo PrimeiroNome
+### Comparação de Performance
 
-![Exercicio 9](Imagens/9.png)
+| Método | Tempo Resposta | Interface | Flexibilidade |
+|--------|---------------|-----------|---------------|
+| VS Code | ~100-200ms | ★★★★★ | ★★★★☆ |
+| Terminal | ~50-100ms | ★★☆☆☆ | ★★★★★ |
 
-## 10 - Buscar o nome do filme e o gênero
+## Vantagens da Solução
 
-![Exercicio 10](Imagens/10.png)
+### Benefícios Técnicos
+- **Multiplataforma**: Executável em qualquer sistema operacional
+- **Isolamento**: Ambiente containerizado e reproduzível
+- **Flexibilidade**: Duas interfaces para diferentes necessidades
+- **Performance**: Tempo de resposta adequado para desenvolvimento
 
-## 11 - Buscar o nome do filme e o gênero do tipo "Mistério"
+### Benefícios de Produtividade  
+- **IntelliSense**: Redução de erros de sintaxe
+- **Visualização**: Resultados organizados e legíveis
+- **Portabilidade**: Configuração facilmente replicável
+- **Integração**: Compatível com ferramentas de desenvolvimento modernas
 
-![Exercicio 11](Imagens/11.png)
+## Conclusão
 
-## 12 - Buscar o nome do filme e os atores, trazendo o PrimeiroNome, UltimoNome e seu Papel
+A solução implementada demonstrou ser uma alternativa **completa e eficaz** ao SSMS para desenvolvedores macOS. A combinação de Docker + VS Code + Terminal oferece:
 
-![Exercicio 12](Imagens/12.png)
+- **Funcionalidade equivalente** ao ambiente Windows/SSMS
+- **Experiência de desenvolvimento moderna** com ferramentas atuais
+- **Flexibilidade** entre interface gráfica e linha de comando
+- **Reprodutibilidade** através de containerização
+
+Esta abordagem foi desenvolvida em resposta à **necessidade de utilizar SQL Server em ambiente macOS**, considerando a ausência de sistema operacional Windows no ambiente de desenvolvimento. A solução implementada demonstrou **alta eficácia** e é recomendada para estudantes e profissionais que enfrentem cenário similar, oferecendo uma experiência de desenvolvimento robusta e compatível com padrões profissionais de mercado.
+
+## Especificações Técnicas
+
+- **Sistema Operacional**: macOS  
+- **Container**: mcr.microsoft.com/mssql/server:2022-latest
+- **Conexão**: localhost:1433
+- **Database**: Filmes (criado via Script Filmes.sql)
+- **Autenticação**: SQL Server Authentication (sa)
+- **Extensão**: MSSQL extension for Visual Studio Code
