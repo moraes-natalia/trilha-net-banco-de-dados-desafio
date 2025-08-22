@@ -62,15 +62,13 @@ Exercício 01 - Consulta Básica - SELECT Nome, Ano FROM Filmes: Visualização 
 <br>
 <br>
 
-**Exercício 10 - Consulta com JOIN - Filmes e Gêneros** 
-*Demonstração de consulta complexa com INNER JOIN entre tabelas Filmes e Generos, exibindo relacionamentos*
+Exercício 10 - Consulta com JOIN - Filmes e Gêneros: Demonstração de consulta complexa com INNER JOIN entre tabelas Filmes e Generos, exibindo relacionamentos.
 
 <img width="1673" height="1003" alt="10" src="https://github.com/user-attachments/assets/f251574a-fe55-4f88-bdcd-e97dd75745db" />
 <br>
 <br>
 
-**Exercício 11 - Consulta Filtrada - Gênero Mistério**
-*Consulta específica filtrando filmes do gênero "Mistério" usando WHERE clause*
+Exercício 11 - Consulta Filtrada - Gênero Mistério*: Consulta específica filtrando filmes do gênero "Mistério" usando WHERE clause.
 
 <img width="1680" height="1050" alt="11" src="https://github.com/user-attachments/assets/b86bc04d-1b69-490a-a196-6794b625bf3d" />
 <br>
@@ -94,8 +92,7 @@ A implementação via terminal oferece performance superior e controle granular:
 
 ### Exemplo de Execução no Terminal
 
-**Execução via sqlcmd**
-*Demonstração da execução via terminal mostrando conexão Docker, consulta SQL e resultados em formato texto*
+Execução via sqlcmd: Demonstração da execução via terminal mostrando conexão Docker, consulta SQL e resultados em formato texto.
 
 <br>
 <img width="593" height="382" alt="Captura de Tela 2025-08-21 às 18 38 42" src="https://github.com/user-attachments/assets/c5a222f0-25e0-4c06-81c0-77c55e0398c2" />
