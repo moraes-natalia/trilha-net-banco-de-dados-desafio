@@ -55,17 +55,23 @@ A implementação via VS Code oferece uma experiência visual completa com recur
 
 ### Exemplos de Execução no VS Code
 
-**Imagem 1: Consulta Básica - SELECT Nome, Ano FROM Filmes**
-![VS Code - Consulta 1](Image1)
-*Visualização da primeira consulta mostrando lista completa de filmes com nome e ano, resultado apresentado em tabela formatada*
+<br>
+Exercício 01 - Consulta Básica - SELECT Nome, Ano FROM Filmes: Visualização da primeira consulta mostrando lista completa de filmes com nome e ano, resultado apresentado em tabela formatada.
 
-**Imagem 2: Consulta com JOIN - Filmes e Gêneros**  
-![VS Code - Consulta com JOIN](Image2)
-*Demonstração de consulta complexa com INNER JOIN entre tabelas Filmes e Generos, exibindo relacionamentos*
+<img width="1680" height="1050" alt="01" src="https://github.com/user-attachments/assets/acd3e6b4-2fdd-40b1-8c26-59bced107b61" />
+<br>
+<br>
 
-**Imagem 3: Consulta Filtrada - Gênero Mistério**
-![VS Code - Filtro por Gênero](Image3)
-*Consulta específica filtrando filmes do gênero "Mistério" usando WHERE clause*
+Exercício 10 - Consulta com JOIN - Filmes e Gêneros: Demonstração de consulta complexa com INNER JOIN entre tabelas Filmes e Generos, exibindo relacionamentos.
+
+<img width="1673" height="1003" alt="10" src="https://github.com/user-attachments/assets/f251574a-fe55-4f88-bdcd-e97dd75745db" />
+<br>
+<br>
+
+Exercício 11 - Consulta Filtrada - Gênero Mistério*: Consulta específica filtrando filmes do gênero "Mistério" usando WHERE clause.
+
+<img width="1680" height="1050" alt="11" src="https://github.com/user-attachments/assets/b86bc04d-1b69-490a-a196-6794b625bf3d" />
+<br>
 
 ### Recursos Destacados no VS Code
 - Interface clean e moderna
@@ -86,9 +92,12 @@ A implementação via terminal oferece performance superior e controle granular:
 
 ### Exemplo de Execução no Terminal
 
-**Imagem 4: Execução via sqlcmd**
-![Terminal - sqlcmd](Image4)
-*Demonstração da execução via terminal mostrando conexão Docker, consulta SQL e resultados em formato texto*
+Execução via sqlcmd: Demonstração da execução via terminal mostrando conexão Docker, consulta SQL e resultados em formato texto.
+
+<br>
+<img width="593" height="382" alt="Captura de Tela 2025-08-21 às 18 38 42" src="https://github.com/user-attachments/assets/c5a222f0-25e0-4c06-81c0-77c55e0398c2" />
+<br>
+
 
 ### Comandos Utilizados
 ```bash
@@ -103,10 +112,11 @@ SELECT TOP 10 Nome, Ano, Duracao FROM Filmes ORDER BY Ano;
 ```
 
 ## Diagrama de Fluxo da Solução
+Arquitetura Visual: Diagrama - Conexão entre VS Code, Terminal e SQL Server via Docker.
 
-**Imagem 5: Arquitetura Visual**
-![Diagrama de Arquitetura](Image5)
-*Diagrama mostrando a conexão entre VS Code, Terminal e SQL Server via Docker*
+<img width="726" height="161" alt="Captura de Tela 2025-08-21 às 18 40 48" src="https://github.com/user-attachments/assets/505d9941-61d7-4b63-a3bd-db3d82da00ad" />
+
+
 
 ## Resultados Alcançados
 
@@ -156,3 +166,8 @@ Esta abordagem foi desenvolvida em resposta à **necessidade de utilizar SQL Ser
 - **Database**: Filmes (criado via Script Filmes.sql)
 - **Autenticação**: SQL Server Authentication (sa)
 - **Extensão**: MSSQL extension for Visual Studio Code
+
+---
+
+**Bootcamp WEX - End to End Engineering - DIO**  
+Desenvolvido por [Natalia Moraes](https://www.linkedin.com/in/moraesnatalia/)
