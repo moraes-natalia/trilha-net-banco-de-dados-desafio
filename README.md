@@ -94,6 +94,7 @@ A implementação via terminal oferece performance superior e controle granular:
 
 **Execução via sqlcmd**
 *Demonstração da execução via terminal mostrando conexão Docker, consulta SQL e resultados em formato texto*
+
 <br>
 <img width="593" height="382" alt="Captura de Tela 2025-08-21 às 18 38 42" src="https://github.com/user-attachments/assets/c5a222f0-25e0-4c06-81c0-77c55e0398c2" />
 <br>
