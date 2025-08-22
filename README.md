@@ -54,7 +54,7 @@ A implementação via VS Code oferece uma experiência visual completa com recur
 - **Execução de Consultas**: Interface intuitiva com botões de ação
 
 ### Exemplos de Execução no VS Code
-<br>
+
 <br>
 **Exercício 01 - Consulta Básica - SELECT Nome, Ano FROM Filmes**
 <img width="1680" height="1050" alt="01" src="https://github.com/user-attachments/assets/acd3e6b4-2fdd-40b1-8c26-59bced107b61" />
@@ -71,7 +71,6 @@ A implementação via VS Code oferece uma experiência visual completa com recur
 **Exercício 11 - Consulta Filtrada - Gênero Mistério**
 <img width="1680" height="1050" alt="11" src="https://github.com/user-attachments/assets/b86bc04d-1b69-490a-a196-6794b625bf3d" />
 *Consulta específica filtrando filmes do gênero "Mistério" usando WHERE clause*
-<br>
 <br>
 
 ### Recursos Destacados no VS Code
@@ -95,9 +94,10 @@ A implementação via terminal oferece performance superior e controle granular:
 
 **Execução via sqlcmd**
 *Demonstração da execução via terminal mostrando conexão Docker, consulta SQL e resultados em formato texto*
+<br>
 <img width="593" height="382" alt="Captura de Tela 2025-08-21 às 18 38 42" src="https://github.com/user-attachments/assets/c5a222f0-25e0-4c06-81c0-77c55e0398c2" />
 <br>
-<br>
+
 
 ### Comandos Utilizados
 ```bash
