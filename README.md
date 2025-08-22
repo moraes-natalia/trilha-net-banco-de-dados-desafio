@@ -156,3 +156,8 @@ Esta abordagem foi desenvolvida em resposta à **necessidade de utilizar SQL Ser
 - **Database**: Filmes (criado via Script Filmes.sql)
 - **Autenticação**: SQL Server Authentication (sa)
 - **Extensão**: MSSQL extension for Visual Studio Code
+
+---
+
+**Bootcamp WEX - End to End Engineering - DIO**  
+Desenvolvido por [Natalia Moraes](https://www.linkedin.com/in/moraesnatalia/)
