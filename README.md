@@ -112,7 +112,7 @@ SELECT TOP 10 Nome, Ano, Duracao FROM Filmes ORDER BY Ano;
 ```
 
 ## Diagrama de Fluxo da Solução
-Arquitetura Visual: Diagrama mostrando a conexão entre VS Code, Terminal e SQL Server via Docker.
+Arquitetura Visual: Diagrama - Conexão entre VS Code, Terminal e SQL Server via Docker.
 
 <img width="726" height="161" alt="Captura de Tela 2025-08-21 às 18 40 48" src="https://github.com/user-attachments/assets/505d9941-61d7-4b63-a3bd-db3d82da00ad" />
 
