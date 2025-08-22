@@ -54,7 +54,8 @@ A implementação via VS Code oferece uma experiência visual completa com recur
 - **Execução de Consultas**: Interface intuitiva com botões de ação
 
 ### Exemplos de Execução no VS Code
-
+<br>
+<br>
 **Exercício 01 - Consulta Básica - SELECT Nome, Ano FROM Filmes**
 <img width="1680" height="1050" alt="01" src="https://github.com/user-attachments/assets/acd3e6b4-2fdd-40b1-8c26-59bced107b61" />
 *Visualização da primeira consulta mostrando lista completa de filmes com nome e ano, resultado apresentado em tabela formatada*
