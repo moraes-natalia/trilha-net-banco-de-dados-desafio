@@ -55,18 +55,17 @@ A implementação via VS Code oferece uma experiência visual completa com recur
 
 ### Exemplos de Execução no VS Code
 
-**Imagem 1: Consulta Básica - SELECT Nome, Ano FROM Filmes**
-
+**Consulta Básica - SELECT Nome, Ano FROM Filmes**
 <img width="1680" height="1050" alt="01" src="https://github.com/user-attachments/assets/acd3e6b4-2fdd-40b1-8c26-59bced107b61" />
 *Visualização da primeira consulta mostrando lista completa de filmes com nome e ano, resultado apresentado em tabela formatada*
 
-**Imagem 2: Consulta com JOIN - Filmes e Gêneros**  
 
+**Imagem 2: Consulta com JOIN - Filmes e Gêneros**  
 <img width="1673" height="1003" alt="10" src="https://github.com/user-attachments/assets/f251574a-fe55-4f88-bdcd-e97dd75745db" />
 *Demonstração de consulta complexa com INNER JOIN entre tabelas Filmes e Generos, exibindo relacionamentos*
 
-**Imagem 3: Consulta Filtrada - Gênero Mistério**
 
+**Imagem 3: Consulta Filtrada - Gênero Mistério**
 <img width="1680" height="1050" alt="11" src="https://github.com/user-attachments/assets/b86bc04d-1b69-490a-a196-6794b625bf3d" />
 *Consulta específica filtrando filmes do gênero "Mistério" usando WHERE clause*
 
@@ -108,9 +107,9 @@ SELECT TOP 10 Nome, Ano, Duracao FROM Filmes ORDER BY Ano;
 
 ## Diagrama de Fluxo da Solução
 **Imagem 5: Arquitetura Visual**
-
 <img width="726" height="161" alt="Captura de Tela 2025-08-21 às 18 40 48" src="https://github.com/user-attachments/assets/505d9941-61d7-4b63-a3bd-db3d82da00ad" />
 *Diagrama mostrando a conexão entre VS Code, Terminal e SQL Server via Docker*
+
 
 ## Resultados Alcançados
 
